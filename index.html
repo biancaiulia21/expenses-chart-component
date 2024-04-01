@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Expenses chart component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!--top-->
+    <div class="container__balance">
+      <div class="my__balance">
+        <p>My balance</p>
+        <h2>$921.48</h2>
+      </div>
+      <div class="my__pic">
+        <img src="./images/logo.svg" alt="my-pic">
+      </div>
+    </div>
+
+    <div class="container__spending">
+      <!--middle-->
+      <div class="hero">
+        <h2>Spending - Last 7 days</h2>
+        <div class="container__chart">
+          <canvas id="mychart" style="width: 100%; margin: 0; padding: 0;"></canvas>
+        </div>
+
+        <div class="bar"></div>
+      </div>
+
+      <!--bottom-->
+      <div class="container__total">
+        <div class="total__month">
+          <p>Total this month</p>
+          <h1>$478.33</h1>
+        </div>
+        <div class="difference__month">
+          <p><strong>+2.4%</strong></p>
+          <p class="p2">from last month</p>
+        </div>
+      </div>
+
+    </div>
+
+
+    
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script src="script2.js"></script>
+ 
+  
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Bianca</a>.
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

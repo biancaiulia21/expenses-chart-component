@@ -1,0 +1,199 @@
+/*
+- View the bar chart and hover over the individual bars to see the correct amounts for each day
+- See the current day’s bar highlighted in a different colour to the other bars
+- View the optimal layout for the content depending on their device’s screen size
+- See hover states for all interactive elements on the page
+- **Bonus**: Use the JSON data file provided to dynamically size the bars on the chart
+
+# Colors
+
+### Primary
+
+- Soft red: hsl(10, 79%, 65%)
+- Cyan: hsl(186, 34%, 60%)
+
+### Neutral
+
+- Dark brown: hsl(25, 47%, 15%)
+- Medium brown: hsl(28, 10%, 53%)
+- Cream: hsl(27, 66%, 92%)
+- Very pale orange: hsl(33, 100%, 98%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px
+*/
+*{
+    font-family: "DM Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    
+}
+:root{
+    /*primary*/
+    --Cyan: hsl(186, 34%, 60%);
+    --Soft-red: hsl(10, 79%, 65%);
+    /*neutral*/
+    --Dark-brown: hsl(25, 47%, 15%);
+    --Medium-brown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Very-pale-orange: hsl(33, 100%, 98%);
+}
+html{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+}
+body{
+    height: 100%;   
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background: var(--Cream);
+}
+p{
+    font-size: 15px;
+}
+
+.container{
+    gap:1rem;
+    width:450px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+}
+
+.container__balance{
+    background: var(--Soft-red);
+    border-radius:1em ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.my__balance{
+    color: var(--Cream);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.my__balance h2{
+    padding-bottom: 0;
+}
+.my__balance:hover{
+    cursor: pointer;
+}
+.my__balance .my__pic{
+    display: block;
+}
+img{
+    height: 100%;
+    max-height: 40px;
+    width: 100%;
+}
+
+.container__spending{
+    background:var(--Very-pale-orange) ;
+    border-radius:1em ;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    
+}
+.hero h2{
+    color: var(--Dark-brown);
+    padding: 25px;
+}
+.hero h2:hover{
+    cursor: pointer;
+}
+.bar{
+    margin: 25px 15px;
+    border: 1px solid var(--Cream);
+    
+}
+.container__total{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px 25px 25px ;
+}
+.total__month p{
+    color: var(--Medium-brown);
+    
+    
+}
+.total__month h1{
+    color: var(--Dark-brown);
+    font-weight: 600;
+}
+.total__month h1:hover{
+    cursor: pointer;
+}
+.difference__month{
+    text-align: right;
+}
+.difference__month strong{
+    color: var(--Dark-brown);    
+}
+.difference__month .p2{
+    color: var(--Medium-brown);
+}
+
+@media screen and (max-width:1440px){
+    body{
+        max-width: 1440px; 
+    }
+    
+}
+
+@media screen and (max-width:375px) {
+    
+    .container{
+        gap:1rem;
+        max-width: 100vw;
+        width:100%;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;       
+    }
+    .container__balance p{
+        max-width: 50vw;
+    }
+    .container__balance img{
+        max-width: 20vw;
+    }
+    .hero h2{
+        max-width: 100vw;
+    }
+    .container__total .total__month{
+        max-width: 50vw;
+        font-size: 4vw;
+        margin-right: 10px;
+    }
+
+    .container__total .difference__month{
+        max-width: 50vw;
+        font-size: 4vw;
+    }
+}
